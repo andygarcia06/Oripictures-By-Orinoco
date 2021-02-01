@@ -55,9 +55,9 @@
      <div class="carousel slide text-md-center" data-ride="carousel" id="carouselExample">
     
         <ol class="carousel-indicators">
-          <li data-target="#carouselExample" data-slide-to="1" class="active"></li>
+          <li data-target="#carouselExample" data-slide-to="0" class="active"></li>
+          <li data-target="#carouselExample" data-slide-to="1"></li>
           <li data-target="#carouselExample" data-slide-to="2"></li>
-          <li data-target="#carouselExample" data-slide-to="3"></li>
         </ol>
         
         <div class="carousel-inner">
@@ -76,7 +76,6 @@
                 <p>De la focal à l'objectif, numérique ou print, nous offrons de nombreuses options et variantes de nos appareils</p>
               </div>
             </div>
-          </div>
 
           <div class="carousel-item">
             <img src="img/image-slider-3.jpg" alt="image d'un appreil photo vintage " class="d-block w-100" />
@@ -99,7 +98,10 @@
           <span class="carousel-control-next-icon text-secondary"></span>
         </a>
         
-      </div> 
+
+      </div>
+
+
       <!--Première section titre -->
      <!-- <section id="first_section">
         <figure id="fond-photo-ourson">
@@ -112,7 +114,7 @@
     </section> -->
    
     <!--Section vente des articles-->
-    <section id="catalogue" class="partie__pictures">
+    <section id="catalogue" class="m-5 partie__pictures ">
     
     </section>
     
@@ -120,45 +122,51 @@
     <!-- FOOTER -->
     <footer class="container bg-secondary p-3">
         <div class="row row-cols-1 row-cols-md-3 m-0">
-            <div class="col">
-              <div class="card h-100 bg-primary">
-                <div class="card-body">
-                  <h5 class="card-title text-secondary">Informations</h5>
-                  <p class="card-text">
-                    <ul>
-                        <li><a class="text-secondary"href="#">Qui sommes nous ?</a></li>
-                        <li><a class="text-secondary" href="#">Mentions légales</a></li>
-                        <li><a class="text-secondary" href="#">Conditions générales</a></li>
-                    </ul>
-                </p>
+            
+          <div class="col-lg-4">
+              <div class="card h-100 bg-primary py-1">
+                <div class="dropdown card-body">
+                  <button class="btn btn-secondary btn-block dropdown-toggle d-block m-auto card-title" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    Informations
+                  </button>
+                  <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                    <a class="dropdown-item" href="#">Qui sommes-nous ?</a>
+                    <a class="dropdown-item" href="#">Mentions légales</a>
+                    <a class="dropdown-item" href="#">Conditions générales</a>
+                  </div>
                 </div>
               </div>
-
             </div>
-            <div class="col">
-              <div class="card h-100 bg-primary">
-                <div class="card-body">
-                  <h5 class="card-title">Service Client</h5>
-                  <p class="card-text"><ul>
-                    <li><a class="text-secondary" href="#">Suivi de votre commande</a></li>
-                    <li><a class="text-secondary" href="#">Retour et remboursement</a></li>
-                    <li><a class="text-secondary"href="#">Nous Contacter</a></li>
-                </ul>
-            </p>
+          </div>
+           
+            <div class="col-lg-4">
+              <div class="card h-100 bg-primary py-1">
+                <div class="dropdown card-body">
+                  <button class="btn btn-secondary btn-block dropdown-toggle d-block m-auto card-title" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    Service client
+                  </button>
+                  <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                    <a class="dropdown-item" href="#">Suivi de votre commande</a>
+                    <a class="dropdown-item" href="#">Retour et remboursement</a>
+                    <a class="dropdown-item" href="#">Nous contacter</a>
+                  </div>
                 </div>
               </div>
-
             </div>
-            <div class="col">
-              <div class="card h-100 bg-primary">
-                <div class="card-body">
-                  <h5 class="card-title">Mon Compte</h5>
-                  <p class="card-text"><ul>
-                    <li><a class="text-secondary" href="#">Me connecter</a></li>
-                    <li><a class="text-secondary" href="#">Mes commandes</a></li>
-                    <li><a class="text-secondary" href="#">Mes adresses</a></li>
-                </ul>
-            </p>
+          </div>
+
+
+            <div class="col-lg-4">
+              <div class="card h-100 bg-primary py-1">
+                <div class="dropdown card-body">
+                  <button class="btn btn-secondary btn-block dropdown-toggle d-block m-auto card-title" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    Mon compte
+                  </button>
+                  <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                    <a class="dropdown-item" href="#">Me Connecter</a>
+                    <a class="dropdown-item" href="#">Mes commandes</a>
+                    <a class="dropdown-item" href="#">Mes adresses</a>
+                  </div>
                 </div>
               </div>
             </div>
