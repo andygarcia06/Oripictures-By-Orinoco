@@ -1,6 +1,6 @@
 // CONST //
 
-const pictureCamera = document.createElement('img');
+const photoCamera = document.createElement('img');
 const fondPhotoCamera = document.getElementById('fond-photo-camera');
 fondPhotoCamera.appendChild(picture.camera);
 const catalogue = document.getElementById('catalogue');
@@ -8,7 +8,25 @@ const catalogue = document.getElementById('catalogue');
 
 //FUNCTION //
 
-function insertURLImage(section, imgCameras){
+//function promiseGet() {
+//    return new Promise((resolve, reject) => {
+//        let recupHttp = new XMLHttpRequest();
+//        recupHttp.open('GET', 'http://localhost:3000/api/cameras');
+//        recupHttp.send();
+//        recupHttp.onreadystatechange = function() {
+//            if(this.readyState === XMLHttpRequest.DONE) {
+//                if(this.status === 200) {
+//                    resolve(JSON.parse(this.responseText));
+//                }else{
+//                    reject(recupHttp);
+//                }
+//            }
+//        }
+//    })
+//}
+//
+
+function insertionURLImage(section, imgCameras){
     const newFigure = document.createElement('figure');
     section.appendChild(newFigure);
     const newImg = document.createElement('img');
@@ -17,13 +35,13 @@ function insertURLImage(section, imgCameras){
     newImg.setAttribute('alt',"image caméra");
 }
 
-function insertName(div, nameCamera){
+function insertionNom(div, nameCamera){
     const newH3 = document.createElement('h3');
     div.appendChild(newH3);
     newH3.innerHTML = nameCamera;
 }
 
-function insertId(div, idCamera){
+function insertionId(div, idCamera){
     const newDiv2 = document.createElement('div');
     div.appendChild(newDiv2);
     newDiv2.className = 'id_camera';
@@ -38,20 +56,20 @@ function insertId(div, idCamera){
     newP2.innerHTML = idTeddies;
 }
 
-function insertColor(div){
+function insertionCouleur(div){
     const newP3 = document.createElement('p');
     div.appendChild(newP3);
     const newSpan2 = document.createElement('span');
     newP3.appendChild(newSpan2);
     newSpan2.innerHTML = "Lentille : Personnalisable";
 }
-function insertDescription(div, descriptionCamera){
+function insertionDescription(div, descriptionCamera){
     const newP4 = document.createElement('p');
     div.appendChild(newP4);
     newP4.innerHTML = descriptionCamera;
 }
 
-function insertPrice(div3, priceCamera){
+function insertionPrix(div3, priceCamera){
     const newDiv4 = document.createElement('div');
     div3.appendChild(newDiv4);
     newDiv4.className = 'prix_Camera';
@@ -60,7 +78,7 @@ function insertPrice(div3, priceCamera){
     newP5.innerHTML = priceCamera;
 }
 
-function insertLienPerso(div3, idLienCamera){
+function insertionLienPerso(div3, idLienCamera){
     const newDiv5 = document.createElement('div');
     div3.appendChild(newDiv5);
     newDiv5.className = 'ajout_panier';
@@ -85,27 +103,6 @@ function serverOut() {
     divServerOut.id = 'div_server_out';
     divServerOut.innerHTML = 'Nous revenons très bientôt';
 }
-
-
-//function promiseGet() {
-//    return new Promise((resolve, reject) => {
-//        let recupHttp = new XMLHttpRequest();
-//        recupHttp.open('GET', 'http://localhost:3000/api/cameras');
-//        recupHttp.send();
-//        recupHttp.onreadystatechange = function() {
-//            if(this.readyState === XMLHttpRequest.DONE) {
-//                if(this.status === 200) {
-//                    resolve(JSON.parse(this.responseText));
-//                }else{
-//                    reject(recupHttp);
-//                }
-//            }
-//        }
-//    })
-//}
-//
-
-
 
 //APPEL DE LA FONCTION
 
