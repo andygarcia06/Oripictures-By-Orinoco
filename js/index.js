@@ -104,6 +104,7 @@ function serverOut() {
     divServerOut.innerHTML = 'Nous revenons très bientôt';
 }
 
+
 //APPEL DE LA FONCTION
 
 
