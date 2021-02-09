@@ -8,23 +8,22 @@ const catalogue = document.getElementById('catalogue');
 
 //FUNCTION //
 
-//function promiseGet() {
-//    return new Promise((resolve, reject) => {
-//        let recupHttp = new XMLHttpRequest();
-//        recupHttp.open('GET', 'http://localhost:3000/api/cameras');
-//        recupHttp.send();
-//        recupHttp.onreadystatechange = function() {
-//            if(this.readyState === XMLHttpRequest.DONE) {
-//                if(this.status === 200) {
-//                    resolve(JSON.parse(this.responseText));
-//                }else{
-//                    reject(recupHttp);
-//                }
-//            }
-//        }
-//    })
-//}
-//
+function promiseGet() {
+   return new Promise((resolve, reject) => {
+        let recupHttp = new XMLHttpRequest();
+        recupHttp.open('GET', 'http://localhost:3000/api/cameras');
+        recupHttp.send();
+        recupHttp.onreadystatechange = function() {
+            if(this.readyState === XMLHttpRequest.DONE) {
+               if(this.status === 200) {
+                    resolve(JSON.parse(this.responseText));
+                }else{
+                    reject(recupHttp);
+                }
+          }
+      }
+/    })
+}
 
 function insertionURLImage(section, imgCameras){
     const newFigure = document.createElement('figure');
@@ -107,5 +106,27 @@ function serverOut() {
 
 //APPEL DE LA FONCTION
 
+promiseGet()
+    .then(function(response) {
 
+        picTeddy.setAttribute('src', 'http://localhost:3000/images/vcam_5.jpg');
+        for(let i = 0; i < response.length; i++) {
+            const newSection = document.createElement('section');
+            catalogue.appendChild(newSection);
+            newSection.className = 'CameraPart';
+            insertImageUrl(newSection, response[i].imageUrl);
+            const newDiv1 = document.createElement('div');
+            newSection.appendChild(newDiv1);
+            newDiv1.className = 'description_camera';
+            insertName(newDiv1, response[i].name);
+            insertId(newDiv1, response[i]._id);
+            insertColor(newDiv1);
+            insertDescription(newDiv1, response[i].description);
+            const newDiv3 = document.createElement('div');
+            newSection.appendChild(newDiv3);
+            newDiv3.className = 'tarifs';
+            insertPrice(newDiv3, [response[i].price].map(i => i / 100)+ ' ' + '€');
+            insertLienPerso(newDiv3, response[i]._id);
 
+        }
+    };
