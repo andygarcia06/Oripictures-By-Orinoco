@@ -25,7 +25,7 @@ function promiseGet() {
 /    })
 }
 
-function insertionURLImage(section, imgCameras){
+function insertionUrlImage(section, imgCameras){
     const newFigure = document.createElement('figure');
     section.appendChild(newFigure);
     const newImg = document.createElement('img');
