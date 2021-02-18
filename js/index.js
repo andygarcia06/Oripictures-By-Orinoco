@@ -22,7 +22,7 @@ function promiseGet() {
                 }
           }
       }
-/    })
+    );
 }
 
 function insertionUrlImage(section, imgCameras){
@@ -129,4 +129,4 @@ promiseGet()
             insertLienPerso(newDiv3, response[i]._id);
 
         }
-    };
+    });
