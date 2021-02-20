@@ -21,8 +21,7 @@ function promiseGet() {
                     reject(recupHttp);
                 }
           }
-      }
-    );
+      });
 }
 
 function insertionUrlImage(section, imgCameras){
