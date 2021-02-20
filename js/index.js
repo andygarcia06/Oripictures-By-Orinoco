@@ -117,15 +117,15 @@ promiseGet()
             const newDiv1 = document.createElement('div');
             newSection.appendChild(newDiv1);
             newDiv1.className = 'description_camera';
-            insertName(newDiv1, response[i].name);
-            insertId(newDiv1, response[i]._id);
-            insertColor(newDiv1);
-            insertDescription(newDiv1, response[i].description);
+            insertionNom(newDiv1, response[i].name);
+            insertionId(newDiv1, response[i]._id);
+            insertionCouleur(newDiv1);
+            insertionDescription(newDiv1, response[i].description);
             const newDiv3 = document.createElement('div');
             newSection.appendChild(newDiv3);
             newDiv3.className = 'tarifs';
-            insertPrice(newDiv3, [response[i].price].map(i => i / 100)+ ' ' + '€');
-            insertLienPerso(newDiv3, response[i]._id);
+            insertionPrix(newDiv3, [response[i].price].map(i => i / 100)+ ' ' + '€');
+            insertionLienPerso(newDiv3, response[i]._id);
 
         }
     });
