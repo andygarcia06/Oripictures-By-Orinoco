@@ -21,8 +21,8 @@ function promiseGet() {
                     reject(recupHttp);
                 }
           }
-      });
-}
+      }
+})};
 
 function insertionUrlImage(section, imgCameras){
     const newFigure = document.createElement('figure');
