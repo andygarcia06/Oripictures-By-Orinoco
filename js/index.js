@@ -108,12 +108,12 @@ function serverOut() {
 promiseGet()
     .then(function(response) {
 
-        picTeddy.setAttribute('src', 'http://localhost:3000/images/vcam_5.jpg');
+        photoCamera.setAttribute('src', 'http://localhost:3000/images/vcam_5.jpg');
         for(let i = 0; i < response.length; i++) {
             const newSection = document.createElement('section');
             catalogue.appendChild(newSection);
             newSection.className = 'CameraPart';
-            insertImageUrl(newSection, response[i].imageUrl);
+            insertionImageUrl(newSection, response[i].imageUrl);
             const newDiv1 = document.createElement('div');
             newSection.appendChild(newDiv1);
             newDiv1.className = 'description_camera';
