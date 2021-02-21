@@ -51,7 +51,7 @@ function insertionId(div, idCamera){
     const newP2 = document.createElement('p');
     newDiv2.appendChild(newP2);
     newP2.id = 'id_Cam';
-    newP2.innerHTML = idTeddies;
+    newP2.innerHTML = idCamera;
 }
 
 function insertionCouleur(div){
@@ -85,7 +85,7 @@ function insertionLienPerso(div3, idLienCamera){
     const newA = document.createElement('a');
     newP6.appendChild(newA);
     newA.className = 'lien_page_product';
-    newA.setAttribute('href', './product.html?id=' + idLienTeddies);
+    newA.setAttribute('href', './product.html?id=' + idLienCamera);
     newA.innerHTML = 'Personnaliser votre caméra vintage !';
 }
 
