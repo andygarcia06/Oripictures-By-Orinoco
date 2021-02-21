@@ -113,7 +113,7 @@ promiseGet()
             const newSection = document.createElement('section');
             catalogue.appendChild(newSection);
             newSection.className = 'CameraPart';
-            insertionImageUrl(newSection, response[i].imageUrl);
+            insertionUrlImage(newSection, response[i].imageUrl);
             const newDiv1 = document.createElement('div');
             newSection.appendChild(newDiv1);
             newDiv1.className = 'description_camera';
