@@ -1,8 +1,6 @@
 // CONST //
 
 const photoCamera = document.createElement('img');
-const fondPhotoCamera = document.getElementById('fond-photo-camera');
-fondPhotoCamera.appendChild(picture.camera);
 const catalogue = document.getElementById('catalogue');
 
 
