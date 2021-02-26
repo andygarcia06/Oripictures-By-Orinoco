@@ -130,7 +130,7 @@ promiseGet()
             }
             const cameraAjoutée = localStorage.getItem('product');
             if(cameraAjoutée) {
-                let camerasPanier = JSON.parse(cameraAjoutée);
+                camerasPanier = JSON.parse(cameraAjoutée);
                 camerasPanier.push(cameraChoisit);
                 localStorage.setItem('product', JSON.stringify(camerasPanier));
                 alert('Ajouté au panier !');

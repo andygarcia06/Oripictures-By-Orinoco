@@ -49,7 +49,7 @@ const myCommand = function() {
     for(let i in camerasAdded) {
         const myDetail = document.createElement('div');
         detailBuy.appendChild(myDetail);
-        myDetail.className = ''
+        myDetail.className = "";
         const myDetailName = document.createElement('div');
         myDetail.appendChild(myDetailName);
         myDetailName.id = '';
@@ -67,12 +67,12 @@ const myCommand = function() {
         // Partie Choix Couleur
         const divColor = document.createElement('div');
         myDetail.appendChild(divColor);
-        divColor.className = 'bg-primary';
+        divColor.className = "";
         divColor.innerHTML = camerasAdded[i].color;
         //Partie Prix 
         const myDetailPrice = document.createElement('div');
         myDetail.appendChild(myDetailPrice);
-        myDetailPrice.className = 'bg-secondary';
+        myDetailPrice.className = "";
         myDetailPrice.innerHTML = [camerasAdded[i].price].map(i => i / 100) + ' ' + '€';
     
     }
