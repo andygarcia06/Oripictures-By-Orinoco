@@ -88,7 +88,6 @@ function insertionLienPerso(div3, idLienCamera){
     newP6.appendChild(newA);
     newA.setAttribute('href', './produit.html?id=' + idLienCamera);
     newA.innerHTML = 'Personnaliser votre caméra vintage !';
-    newA.className = "text-secondary lien_page_product";
 }
 
 function serverOut() {
