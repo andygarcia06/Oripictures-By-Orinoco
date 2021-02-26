@@ -25,11 +25,11 @@ function promiseGet() {
 function insertionUrlImage(section, imgCameras){
     const newFigure = document.createElement('figure');
     section.appendChild(newFigure);
-    newFigure.className = "w-25 d-block m-auto"
     const newImg = document.createElement('img');
     newFigure.appendChild(newImg);
     newImg.setAttribute('src',imgCameras);
     newImg.setAttribute('alt',"image caméra");
+    newImg.className = "w-25 d-block m-auto"
 }
 
 function insertionNom(div, nameCamera){
