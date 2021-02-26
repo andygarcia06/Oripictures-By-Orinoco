@@ -42,7 +42,7 @@ function insertionNom(description, camera) {
 function insertionId(description, camera) {
     const divId = document.createElement('div');
     description.appendChild(divId);
-    divId.className = '';
+    divId.className = "";
     const paragraphNumId = document.createElement('p');
     divId.appendChild(paragraphNumId);
     const nouveauSpan = document.createElement('span');
@@ -56,19 +56,19 @@ function insertionLentille(description, cameraLentille) {
     const divCouleur = document.createElement('div');
     description.appendChild(divCouleur);
     divCouleur.className =""; 
-    const labelCouleur = document.createElement('label');
-    divColor.appendChild(labelCouleur);
-    labelCouleur.innerHTML = 'Sélectionner votre Couleur préférée : ';
+    const labelLentille = document.createElement('label');
+    divColor.appendChild(labelLentille);
+    labelLentille.innerHTML = 'Sélectionner votre Couleur préférée : ';
     const selectLentille = document.createElement('select');
-    labelColor.appendChild(selectLentille);
+    labelLentille.appendChild(selectLentille);
     selectLentille.id = 'choose_color';
     
-    for(let i = 0; i < cameraColors.length; i +=1){
+    for(let i = 0; i < cameraLentille.length; i +=1){
         const secondeOption = document.createElement('option');
         selectLentille.appendChild(secondeOption);
-        secondeOption.setAttribute('value', cameraColors[i]);
+        secondeOption.setAttribute('value', cameraLentille[i]);
         secondeOption.setAttribute('required', '');
-        secondeOption.innerHTML = cameraColors[i];
+        secondeOption.innerHTML = cameraLentille[i];
     }
 }
 function insertionDescription(description, camera) {
