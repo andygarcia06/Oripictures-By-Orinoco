@@ -25,7 +25,7 @@ function promiseGet() {
 function insertionUrlImage(section, imgCameras){
     const newFigure = document.createElement('figure');
     section.appendChild(newFigure);
-    newFigure.classList = "w-50 d-block m-auto"
+    newFigure.className = "w-25 d-block m-auto"
     const newImg = document.createElement('img');
     newFigure.appendChild(newImg);
     newImg.setAttribute('src',imgCameras);
