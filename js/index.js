@@ -41,7 +41,7 @@ function insertionNom(div, nameCamera){
 function insertionId(div, idCamera){
     const newDiv2 = document.createElement('div');
     div.appendChild(newDiv2);
-    newDiv2.classList = "";
+    newDiv2.className = "bg-secondary";
     const newP1 = document.createElement('p');
     newDiv2.appendChild(newP1);
     const newSpan = document.createElement('span');
