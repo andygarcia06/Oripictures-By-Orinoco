@@ -29,7 +29,7 @@ function insertionUrlImage(section, imgCameras){
     newFigure.appendChild(newImg);
     newImg.setAttribute('src',imgCameras);
     newImg.setAttribute('alt',"image caméra");
-    newImg.className = "w-100 d-block position-absolute top-0 start-0"
+    newImg.className = "w-50 d-block m-auto "
 }
 
 function insertionNom(div, nameCamera){
