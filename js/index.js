@@ -81,13 +81,13 @@ function insertionPrix(div3, priceCamera){
 function insertionLienPerso(div3, idLienCamera){
     const newDiv5 = document.createElement('div');
     div3.appendChild(newDiv5);
-    newDiv5.className = "";
     const newP6 = document.createElement('p');
     newDiv5.appendChild(newP6);
     const newA = document.createElement('a');
     newP6.appendChild(newA);
     newA.setAttribute('href', './produit.html?id=' + idLienCamera);
     newA.innerHTML = 'Personnaliser votre caméra vintage !';
+    newA.className = "text-secondary";
 }
 
 function serverOut() {
