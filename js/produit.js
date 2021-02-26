@@ -32,7 +32,7 @@ function insertionPhoto(section, camera) {
     section.appendChild(nouvelleFigure);
     const nouvellePhoto = document.createElement('img');
     nouvelleFigure.appendChild(nouvellePhoto);
-    nouvellePhoto.setAttribute('src', teddy.imageUrl);
+    nouvellePhoto.setAttribute('src', camera.imageUrl);
 }
 function insertionNom(description, camera) {
     const nomCamera = document.createElement('h3');
