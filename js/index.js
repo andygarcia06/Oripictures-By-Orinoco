@@ -74,7 +74,7 @@ function insertionPrix(div3, priceCamera){
     const newP5 = document.createElement('p');
     newDiv4.appendChild(newP5);
     newP5.innerHTML = priceCamera;
-    nexP5..className = "text-secondary";
+    nexP5.className = "text-secondary";
 }
 
 function insertionLienPerso(div3, idLienCamera){
