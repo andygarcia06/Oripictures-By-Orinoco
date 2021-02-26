@@ -29,7 +29,8 @@ function insertionUrlImage(section, imgCameras){
     newFigure.appendChild(newImg);
     newImg.setAttribute('src',imgCameras);
     newImg.setAttribute('alt',"image caméra");
-    newImg.className = "w-50 d-block m-auto "
+    newImg.className = "w-50 d-block m-auto ";
+
 }
 
 function insertionNom(div, nameCamera){
@@ -87,7 +88,7 @@ function insertionLienPerso(div3, idLienCamera){
     newP6.appendChild(newA);
     newA.setAttribute('href', './produit.html?id=' + idLienCamera);
     newA.innerHTML = 'Personnaliser votre caméra vintage !';
-    newA.className = "text-secondary";
+    newA.className = "text-secondary lien_page_product";
 }
 
 function serverOut() {
@@ -128,4 +129,8 @@ promiseGet()
             insertionLienPerso(newDiv3, response[i]._id);
 
         }
-    });
+    })
+
+    .catch(function(error) {
+        serverOut();
+    })
