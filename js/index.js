@@ -112,7 +112,7 @@ promiseGet()
         for(let i = 0; i < response.length; i++) {
             const newSection = document.createElement('section');
             catalogue.appendChild(newSection);
-            newSection.className = "";
+            newSection.className = " partie__pictures";
             insertionUrlImage(newSection, response[i].imageUrl);
             const newDiv1 = document.createElement('div');
             newSection.appendChild(newDiv1);
