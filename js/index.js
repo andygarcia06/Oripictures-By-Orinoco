@@ -35,18 +35,19 @@ function insertionUrlImage(section, imgCameras){
 function insertionNom(div, nameCamera){
     const newH3 = document.createElement('h3');
     div.appendChild(newH3);
+    newH3.className = "text-secondary";
     newH3.innerHTML = nameCamera;
 }
 
 function insertionId(div, idCamera){
     const newDiv2 = document.createElement('div');
     div.appendChild(newDiv2);
-    newDiv2.className = "bg-secondary";
     const newP1 = document.createElement('p');
     newDiv2.appendChild(newP1);
     const newSpan = document.createElement('span');
     newP1.appendChild(newSpan);
     newSpan.innerHTML = "Numéro d'Id : ";
+    newSpan.className = "text-secondary";
     const newP2 = document.createElement('p');
     newDiv2.appendChild(newP2);
     newP2.innerHTML = idCamera;
@@ -58,11 +59,13 @@ function insertionLentille(div){
     const newSpan2 = document.createElement('span');
     newP3.appendChild(newSpan2);
     newSpan2.innerHTML = "Lentille : Personnalisable";
+    newSpan2.className = "text-secondary";
 }
 function insertionDescription(div, descriptionCamera){
     const newP4 = document.createElement('p');
     div.appendChild(newP4);
     newP4.innerHTML = descriptionCamera;
+    newP4.className = "text-secondary";
 }
 
 function insertionPrix(div3, priceCamera){
@@ -71,6 +74,7 @@ function insertionPrix(div3, priceCamera){
     const newP5 = document.createElement('p');
     newDiv4.appendChild(newP5);
     newP5.innerHTML = priceCamera;
+    nexP5..className = "text-secondary";
 }
 
 function insertionLienPerso(div3, idLienCamera){
@@ -81,9 +85,9 @@ function insertionLienPerso(div3, idLienCamera){
     newDiv5.appendChild(newP6);
     const newA = document.createElement('a');
     newP6.appendChild(newA);
-    newA.className = "";
-    newA.setAttribute('href', './produit.html?id=' + idLienCamera);
+    newA.setAttribute('href', 'produit.html?id=' + idLienCamera);
     newA.innerHTML = 'Personnaliser votre caméra vintage !';
+    newA.className = "btn btn-secondary text-primary"
 }
 
 function serverOut() {
