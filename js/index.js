@@ -29,7 +29,7 @@ function insertionUrlImage(section, imgCameras){
     newFigure.appendChild(newImg);
     newImg.setAttribute('src',imgCameras);
     newImg.setAttribute('alt',"image caméra");
-    newImg.className = "w-50 d-block m-auto ";
+    newImg.className = "w-75 d-block m-auto ";
 
 }
 
