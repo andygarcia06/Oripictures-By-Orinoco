@@ -65,7 +65,7 @@ function insertLienPerso(div3, idLienCameras){
     const newA = document.createElement('a');
     newP6.appendChild(newA);
     newA.className = 'lien_page_product';
-    newA.setAttribute('href', './product.html?id=' + idLienCameras);
+    newA.setAttribute('href', './produit.html?id=' + idLienCameras);
     newA.innerHTML = 'Personnaliser le !';
 }
 function serverOut() {
