@@ -55,6 +55,12 @@ function insertColor(div){
     newSpan2.innerHTML = "Couleur : Modifiable";
 }
 
+function insertDescription(div, descriptionTeddies){
+    const newP4 = document.createElement("p");
+    div.appendChild(newP4);
+    newP4.innerHTML = descriptionTeddies;
+}
+
 
     
 
