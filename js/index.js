@@ -12,17 +12,17 @@ const urlImg = "http://localhost:3000/images/teddy_5.jpg"
 
 // Fonctions //
 
-function getInfo () {
+function promiseGet() {
     return new Promise((resolve, reject) => {
-        let requete = new XMLHttpRequest();
-        requete.open('GET', url);
-        requete.send();
-        requete.onreadystatechange = function() {
-            if(requete.readyState === XMLHttpRequest.DONE) {
-                if(requete.status === 200) {
-                    resolve(JSON.parse(requete.responseText));
+        let recupHttp = new XMLHttpRequest();
+        recupHttp.open("GET", url);
+        recupHttp.send();
+        recupHttp.onreadystatechange = function() {
+            if(this.readyState === XMLHttpRequest.DONE) {
+                if(this.status === 200) {
+                    resolve(JSON.parse(this.responseText));
                 }else{
-                    reject(requete);
+                    reject(recupHttp);
                 }
             }
         }
