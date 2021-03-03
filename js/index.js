@@ -130,14 +130,15 @@ promiseGet()
             insertImageUrl(newSection, response[i].imageUrl);
             const newDiv1 = document.createElement("div");
             newSection.appendChild(newDiv1);
-            newDiv1.className = "text-light text-secondary";
+            newDiv1.className = "text-secondary";
             insertName(newDiv1, response[i].name);
             insertId(newDiv1, response[i]._id);
             insertColor(newDiv1);
             insertDescription(newDiv1, response[i].description);
             const newDiv3 = document.createElement("div");
             newSection.appendChild(newDiv3);
-            newDiv3.className = "";
+            newDiv3.className = "text-secondary";
+            newDiv5.className = "badge bg-secondary text-wrap"
             insertPrice(newDiv3, [response[i].price].map(i => i / 100)+ ' ' + '€');
             insertLienPerso(newDiv3, response[i]._id);
             
