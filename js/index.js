@@ -8,38 +8,27 @@ fondPhotoOurson.appendChild(picTeddy);
 const catalogue = document.getElementById('catalogue');
 const sectionTeddy = document.querySelector('section');
 const url = "http://localhost:3000/api/teddies";
+const urlImg = "http://localhost:3000/images/teddy_5.jpg"
 
 // Fonctions //
 
-// function promiseGet() {
-//     return new Promise((resolve, reject) => {
-//         let requete = new XMLHttpRequest();
-//         requete.open('GET', url);
-//         recupHttp.send();
-//         recupHttp.onreadystatechange = function() {
-//             if(this.readyState === XMLHttpRequest.DONE) {
-//                 if(this.status === 200) {
-//                     resolve(JSON.parse(this.responseText));
-//                 }else{
-//                     reject(recupHttp);
-//                 }
-//             }
-//         }
-//     })
-// }
-
-function GetInfo(){
-    let requete = new XMLHttpRequest();
-    requete.open("GET",url);
-    requete.send();
-    requete.onreadystatechange = function(){
-        if(requete.readyState === XMLHttpRequest.DONE){
-            if (requete.status === 200){
-                let reponse = requete.response; 
+function getInfo () {
+    return new Promise((resolve, reject) => {
+        let requete = new XMLHttpRequest();
+        requete.open('GET', url);
+        requete.send();
+        requete.onreadystatechange = function() {
+            if(requete.readyState === XMLHttpRequest.DONE) {
+                if(requete.status === 200) {
+                    resolve(JSON.parse(requete.responseText));
+                }else{
+                    reject(requete);
+                }
             }
         }
-    }
+    })
 }
+
 
 
 
@@ -129,6 +118,36 @@ function serverOut() {
     divServerOut.innerHTML = "Nous revenons très bientôt";
 }
 
+
+// Appel fonctions //
+
+promiseGet()
+    .then(function(response) {
+
+        picTeddy.setAttribute("src", urlImg);
+        for(let i = 0; i < response.length; i++) {
+            const newSection = document.createElement("section");
+            catalogue.appendChild(newSection);
+            newSection.className = "";
+            insertImageUrl(newSection, response[i].imageUrl);
+            const newDiv1 = document.createElement("div");
+            newSection.appendChild(newDiv1);
+            newDiv1.className = "";
+            insertName(newDiv1, response[i].name);
+            insertId(newDiv1, response[i]._id);
+            insertColor(newDiv1);
+            insertDescription(newDiv1, response[i].description);
+            const newDiv3 = document.createElement("div");
+            newSection.appendChild(newDiv3);
+            newDiv3.className = "";
+            insertPrice(newDiv3, [response[i].price].map(i => i / 100)+ ' ' + '€');
+            insertLienPerso(newDiv3, response[i]._id);
+            
+        }
+    })
+    .catch(function(error) {
+        serverOut();
+    })
 
 
     
