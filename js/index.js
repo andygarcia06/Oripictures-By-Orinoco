@@ -6,8 +6,6 @@
 const catalogue = document.getElementById('catalogue');
 const sectionTeddy = document.querySelector('section');
 const url = "http://localhost:3000/api/teddies";
-const picTeddy = document.createElement('img');
-sectionTeddy.appendChild(picTeddy);
 
 
 // Fonctions //
@@ -125,7 +123,6 @@ function serverOut() {
 promiseGet()
     .then(function(response) {
 
-        picTeddy.setAttribute("src", "http://localhost:3000/images/teddy_5.jpg");
         for(let i = 0; i < response.length; i++) {
             const newSection = document.createElement("section");
             catalogue.appendChild(newSection);
