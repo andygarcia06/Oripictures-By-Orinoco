@@ -2,12 +2,12 @@
 
 // Constantes //
 
-const fondPhotoOurson = document.getElementById('fond-photo-ourson');
-const picTeddy = document.createElement('img');
-fondPhotoOurson.appendChild(picTeddy);
+
 const catalogue = document.getElementById('catalogue');
 const sectionTeddy = document.querySelector('section');
 const url = "http://localhost:3000/api/teddies";
+const picTeddy = document.createElement('img');
+sectionTeddy.appendChild(picTeddy);
 
 
 // Fonctions //
