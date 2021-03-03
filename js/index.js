@@ -44,7 +44,8 @@ function insertImageUrl(section, imageTeddies){
     const newImg = document.createElement("img");
     newFigure.appendChild(newImg);
     newImg.setAttribute("src", imageTeddies);
-    newImg.setAttribute("src", "teddy picture - photo ourson")
+    newImg.setAttribute("src", "teddy picture - photo ourson");
+    newImg.className = "w-50 d-block m-auto"
 }
 
 function insertName(div, nameTeddies){
