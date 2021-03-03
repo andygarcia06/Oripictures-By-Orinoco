@@ -138,7 +138,7 @@ promiseGet()
             const newDiv3 = document.createElement("div");
             newSection.appendChild(newDiv3);
             newDiv3.className = "text-secondary";
-            newDiv5.className = "badge bg-secondary text-wrap"
+            newDiv5.className = "badge bg-secondary text-wrap";
             insertPrice(newDiv3, [response[i].price].map(i => i / 100)+ ' ' + '€');
             insertLienPerso(newDiv3, response[i]._id);
             
