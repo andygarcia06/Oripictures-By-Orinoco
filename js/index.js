@@ -11,8 +11,8 @@ const sectionTeddy = document.querySelector('section');
 // Fonctions //
 
 function insertDivGenérale(){
-    const divGén = document.creeateElement("div");
-    sectionTeddy.appendChild(divGén);
+    const divGen = document.creeateElement("div");
+    sectionTeddy.appendChild(divGen);
     divGén.className = "";
 }
 
@@ -60,6 +60,42 @@ function insertDescription(div, descriptionTeddies){
     div.appendChild(newP4);
     newP4.innerHTML = descriptionTeddies;
 }
+
+function insertPrice(div3, priceTeddies){
+    const newDiv4 = document.createElement("div");
+    div3.appendChild(newDiv4);
+    newDiv4.className = "";
+    const newP5 = document.createElement("p");
+    newDiv4.appendChild(newP5);
+    newP5.innerHTML = priceTeddies;
+}
+
+function insertLienPerso(div3, idLienTeddies){
+    const newDiv5 = document.createElement("div");
+    div3.appendChild(newDiv5);
+    newDiv5.className = "";
+    const newP6 = document.createElement("p");
+    newDiv5.appendChild(newP6);
+    const newA = document.createElement("a");
+    newP6.appendChild(newA);
+    newA.className = "";
+    newA.setAttribute("href", "./product.html?id=" + idLienTeddies);
+    newA.innerHTML = "Personnaliser le !";
+}
+
+function serverOut() {
+    const myH1 = document.getElementById('my_title');
+    myH1.style.display = 'none';
+    const myH2 = document.getElementById('my_second_title');
+    myH2.style.display='none';
+    const myFooter = document.getElementById('footer');
+    myFooter.style.display ='none';
+    const divServerOut = document.createElement('div');
+    catalogue.appendChild(divServerOut);
+    divServerOut.id = 'div_server_out';
+    divServerOut.innerHTML = 'Nous revenons très bientôt';
+}
+
 
 
     
