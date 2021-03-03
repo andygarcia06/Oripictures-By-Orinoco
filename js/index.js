@@ -50,7 +50,6 @@ function insertName(div, nameTeddies){
     const newH3 = document.createElement("h3");
     div.appendChild(newH3);
     newH3.innerHTML = nameTeddies; 
-    newH3.className = "text-secondary";
 }
 
 function insertId(div, idTeddies){
@@ -66,7 +65,6 @@ function insertId(div, idTeddies){
     newDiv2.appendChild(newP2);
     newP2.className = "";
     newP2.innerHTML = idTeddies;
-    newH3.className = "text-secondary";
 }
 
 
@@ -76,14 +74,12 @@ function insertColor(div){
     const newSpan2 = document.createElement("span");
     newP3.appendChild(newSpan2);
     newSpan2.innerHTML = "Couleur : Modifiable";
-    newH3.className = "text-secondary";
 }
 
 function insertDescription(div, descriptionTeddies){
     const newP4 = document.createElement("p");
     div.appendChild(newP4);
     newP4.innerHTML = descriptionTeddies;
-    newH3.className = "text-secondary";
 }
 
 function insertPrice(div3, priceTeddies){
@@ -93,7 +89,6 @@ function insertPrice(div3, priceTeddies){
     const newP5 = document.createElement("p");
     newDiv4.appendChild(newP5);
     newP5.innerHTML = priceTeddies;
-    newH3.className = "text-secondary";
 }
 
 function insertLienPerso(div3, idLienTeddies){
@@ -107,7 +102,6 @@ function insertLienPerso(div3, idLienTeddies){
     newA.className = "";
     newA.setAttribute("href", "./product.html?id=" + idLienTeddies);
     newA.innerHTML = "Personnaliser le !";
-    newH3.className = "text-secondary";
 }
 
 function serverOut() {
