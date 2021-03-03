@@ -130,7 +130,7 @@ promiseGet()
             insertImageUrl(newSection, response[i].imageUrl);
             const newDiv1 = document.createElement("div");
             newSection.appendChild(newDiv1);
-            newDiv1.className = "";
+            newDiv1.className = "text-light text-secondary";
             insertName(newDiv1, response[i].name);
             insertId(newDiv1, response[i]._id);
             insertColor(newDiv1);
