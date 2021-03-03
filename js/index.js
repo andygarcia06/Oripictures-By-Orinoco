@@ -7,8 +7,41 @@ const picTeddy = document.createElement('img');
 fondPhotoOurson.appendChild(picTeddy);
 const catalogue = document.getElementById('catalogue');
 const sectionTeddy = document.querySelector('section');
+const url = "http://localhost:3000/api/teddies";
 
 // Fonctions //
+
+// function promiseGet() {
+//     return new Promise((resolve, reject) => {
+//         let requete = new XMLHttpRequest();
+//         requete.open('GET', url);
+//         recupHttp.send();
+//         recupHttp.onreadystatechange = function() {
+//             if(this.readyState === XMLHttpRequest.DONE) {
+//                 if(this.status === 200) {
+//                     resolve(JSON.parse(this.responseText));
+//                 }else{
+//                     reject(recupHttp);
+//                 }
+//             }
+//         }
+//     })
+// }
+
+function GetInfo(){
+    let requete = new XMLHttpRequest();
+    requete.open("GET",url);
+    requete.send();
+    requete.onreadystatechange = function(){
+        if(requete.readyState === XMLHttpRequest.DONE){
+            if (requete.status === 200){
+                let reponse = requete.response; 
+            }
+        }
+    }
+}
+
+
 
 function insertDivGenérale(){
     const divGen = document.creeateElement("div");
@@ -84,16 +117,16 @@ function insertLienPerso(div3, idLienTeddies){
 }
 
 function serverOut() {
-    const myH1 = document.getElementById('my_title');
-    myH1.style.display = 'none';
-    const myH2 = document.getElementById('my_second_title');
-    myH2.style.display='none';
-    const myFooter = document.getElementById('footer');
-    myFooter.style.display ='none';
-    const divServerOut = document.createElement('div');
+    const myH1 = document.getElementById("my_title");
+    myH1.style.display = "none";
+    const myH2 = document.getElementById("my_second_title");
+    myH2.style.display="none";
+    const myFooter = document.getElementById("footer");
+    myFooter.style.display ="none";
+    const divServerOut = document.createElement("div");
     catalogue.appendChild(divServerOut);
-    divServerOut.id = 'div_server_out';
-    divServerOut.innerHTML = 'Nous revenons très bientôt';
+    divServerOut.id = "div_server_out";
+    divServerOut.innerHTML = "Nous revenons très bientôt";
 }
 
 
